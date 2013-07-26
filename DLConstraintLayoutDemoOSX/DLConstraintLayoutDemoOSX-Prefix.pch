@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'DLConstraintLayoutDemoOSX' target in the 'DLConstraintLayoutDemoOSX' project
+//
+
+#ifdef __OBJC__
+	#import <Cocoa/Cocoa.h>
+#endif

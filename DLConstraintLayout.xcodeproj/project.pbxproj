@@ -1,0 +1,869 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C25F4FCE16F8900D00A8671C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C25F4FCC16F8900D00A8671C /* InfoPlist.strings */; };
+		C25F4FD016F8900D00A8671C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C25F4FCF16F8900D00A8671C /* main.m */; };
+		C25F4FD716F8900D00A8671C /* DLCLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C25F4FD616F8900D00A8671C /* DLCLAppDelegate.m */; };
+		C25F4FDA16F8900E00A8671C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = C25F4FD816F8900E00A8671C /* MainMenu.xib */; };
+		C25F4FE916F8962A00A8671C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C25F4FE816F8962A00A8671C /* Cocoa.framework */; };
+		C25F4FEC16F897E500A8671C /* DLCLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C25F4FEB16F897E500A8671C /* DLCLViewController.m */; };
+		C25F4FED16F897E500A8671C /* DLCLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C25F4FEB16F897E500A8671C /* DLCLViewController.m */; };
+		C25F4FEF16F89BBF00A8671C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C25F4FEE16F89BBF00A8671C /* QuartzCore.framework */; };
+		C25F4FF316F8E3B900A8671C /* libDLConstraintLayout.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2BF8AE216F0E404005F4627 /* libDLConstraintLayout.a */; };
+		C25F501C16FA582200A8671C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2BF8AA416F0E366005F4627 /* CoreGraphics.framework */; };
+		C25F501E16FBCBEC00A8671C /* DLConstraintLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C2BF8AE916F0E404005F4627 /* DLConstraintLayout.m */; };
+		C2A672DA16F2CC24004062E8 /* libDLConstraintLayout.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2BF8AE216F0E404005F4627 /* libDLConstraintLayout.a */; };
+		C2A672DB16F2CC37004062E8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2BF8AF916F0EA92005F4627 /* QuartzCore.framework */; };
+		C2BF8AA116F0E366005F4627 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2BF8AA016F0E366005F4627 /* UIKit.framework */; };
+		C2BF8AA316F0E366005F4627 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2BF8AA216F0E366005F4627 /* Foundation.framework */; };
+		C2BF8AA516F0E366005F4627 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2BF8AA416F0E366005F4627 /* CoreGraphics.framework */; };
+		C2BF8AAB16F0E366005F4627 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C2BF8AA916F0E366005F4627 /* InfoPlist.strings */; };
+		C2BF8AAD16F0E366005F4627 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C2BF8AAC16F0E366005F4627 /* main.m */; };
+		C2BF8AB116F0E366005F4627 /* DLCLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C2BF8AB016F0E366005F4627 /* DLCLAppDelegate.m */; };
+		C2BF8AB316F0E366005F4627 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = C2BF8AB216F0E366005F4627 /* Default.png */; };
+		C2BF8AB516F0E366005F4627 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C2BF8AB416F0E366005F4627 /* Default@2x.png */; };
+		C2BF8AB716F0E366005F4627 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C2BF8AB616F0E366005F4627 /* Default-568h@2x.png */; };
+		C2BF8ABA16F0E366005F4627 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2BF8AB816F0E366005F4627 /* MainStoryboard_iPhone.storyboard */; };
+		C2BF8ABD16F0E366005F4627 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2BF8ABB16F0E366005F4627 /* MainStoryboard_iPad.storyboard */; };
+		C2BF8AC816F0E366005F4627 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2BF8AC716F0E366005F4627 /* SenTestingKit.framework */; };
+		C2BF8AC916F0E366005F4627 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2BF8AA016F0E366005F4627 /* UIKit.framework */; };
+		C2BF8ACA16F0E366005F4627 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2BF8AA216F0E366005F4627 /* Foundation.framework */; };
+		C2BF8AD216F0E366005F4627 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C2BF8AD016F0E366005F4627 /* InfoPlist.strings */; };
+		C2BF8AD516F0E366005F4627 /* DLCLConstraintLayoutTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C2BF8AD416F0E366005F4627 /* DLCLConstraintLayoutTests.m */; };
+		C2BF8AE316F0E404005F4627 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2BF8AA216F0E366005F4627 /* Foundation.framework */; };
+		C2BF8AE816F0E404005F4627 /* DLConstraintLayout.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = C2BF8AE716F0E404005F4627 /* DLConstraintLayout.h */; };
+		C2BF8AEA16F0E404005F4627 /* DLConstraintLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C2BF8AE916F0E404005F4627 /* DLConstraintLayout.m */; };
+		C2BF8AFA16F0EA92005F4627 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2BF8AF916F0EA92005F4627 /* QuartzCore.framework */; };
+		C2EDF5D917A279B600F5528B /* CALayer+DLConstraintLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C2EDF5D817A279B600F5528B /* CALayer+DLConstraintLayout.m */; };
+		C2EDF5DA17A279B600F5528B /* CALayer+DLConstraintLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C2EDF5D817A279B600F5528B /* CALayer+DLConstraintLayout.m */; };
+		C2EDF5E417A279D100F5528B /* DLCLConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = C2EDF5DC17A279D100F5528B /* DLCLConstraint.m */; };
+		C2EDF5E517A279D100F5528B /* DLCLConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = C2EDF5DC17A279D100F5528B /* DLCLConstraint.m */; };
+		C2EDF5E617A279D100F5528B /* DLCLConstraintLayoutManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C2EDF5DF17A279D100F5528B /* DLCLConstraintLayoutManager.m */; };
+		C2EDF5E717A279D100F5528B /* DLCLConstraintLayoutManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C2EDF5DF17A279D100F5528B /* DLCLConstraintLayoutManager.m */; };
+		C2EDF5E817A279D100F5528B /* DLCLConstraintLayoutNode.m in Sources */ = {isa = PBXBuildFile; fileRef = C2EDF5E117A279D100F5528B /* DLCLConstraintLayoutNode.m */; };
+		C2EDF5E917A279D100F5528B /* DLCLConstraintLayoutNode.m in Sources */ = {isa = PBXBuildFile; fileRef = C2EDF5E117A279D100F5528B /* DLCLConstraintLayoutNode.m */; };
+		C2EDF5EA17A279D100F5528B /* DLCLConstraintLayoutSolver.m in Sources */ = {isa = PBXBuildFile; fileRef = C2EDF5E317A279D100F5528B /* DLCLConstraintLayoutSolver.m */; };
+		C2EDF5EB17A279D100F5528B /* DLCLConstraintLayoutSolver.m in Sources */ = {isa = PBXBuildFile; fileRef = C2EDF5E317A279D100F5528B /* DLCLConstraintLayoutSolver.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C25F4FF116F8E3A900A8671C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C2BF8A9516F0E366005F4627 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C2BF8AE116F0E404005F4627;
+			remoteInfo = DLConstraintLayout;
+		};
+		C2A672D816F2CC20004062E8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C2BF8A9516F0E366005F4627 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C2BF8AE116F0E404005F4627;
+			remoteInfo = DLConstraintLayout;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C2BF8AE016F0E404005F4627 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+				C2BF8AE816F0E404005F4627 /* DLConstraintLayout.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		C25F4FA816F88EDE00A8671C /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		C25F4FA916F88EDE00A8671C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		C25F4FAA16F88EDE00A8671C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C25F4FC716F8900D00A8671C /* DLConstraintLayoutDemoOSX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DLConstraintLayoutDemoOSX.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C25F4FCB16F8900D00A8671C /* DLConstraintLayoutDemoOSX-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DLConstraintLayoutDemoOSX-Info.plist"; sourceTree = "<group>"; };
+		C25F4FCD16F8900D00A8671C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C25F4FCF16F8900D00A8671C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C25F4FD116F8900D00A8671C /* DLConstraintLayoutDemoOSX-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DLConstraintLayoutDemoOSX-Prefix.pch"; sourceTree = "<group>"; };
+		C25F4FD516F8900D00A8671C /* DLCLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLCLAppDelegate.h; sourceTree = "<group>"; };
+		C25F4FD616F8900D00A8671C /* DLCLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLCLAppDelegate.m; sourceTree = "<group>"; };
+		C25F4FD916F8900E00A8671C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		C25F4FE816F8962A00A8671C /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		C25F4FEA16F897E400A8671C /* DLCLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLCLViewController.h; sourceTree = "<group>"; };
+		C25F4FEB16F897E500A8671C /* DLCLViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLCLViewController.m; sourceTree = "<group>"; };
+		C25F4FEE16F89BBF00A8671C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		C25F501D16FBBAB700A8671C /* DLConstraintLayout+Protected.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = "DLConstraintLayout+Protected.h"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		C2BF8A9D16F0E366005F4627 /* DLConstraintLayoutDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DLConstraintLayoutDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2BF8AA016F0E366005F4627 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		C2BF8AA216F0E366005F4627 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C2BF8AA416F0E366005F4627 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C2BF8AAA16F0E366005F4627 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C2BF8AAC16F0E366005F4627 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C2BF8AAF16F0E366005F4627 /* DLCLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLCLAppDelegate.h; sourceTree = "<group>"; };
+		C2BF8AB016F0E366005F4627 /* DLCLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLCLAppDelegate.m; sourceTree = "<group>"; };
+		C2BF8AB216F0E366005F4627 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		C2BF8AB416F0E366005F4627 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		C2BF8AB616F0E366005F4627 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		C2BF8AB916F0E366005F4627 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		C2BF8ABC16F0E366005F4627 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		C2BF8AC616F0E366005F4627 /* DLConstraintLayoutTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DLConstraintLayoutTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2BF8AC716F0E366005F4627 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		C2BF8ACF16F0E366005F4627 /* DLConstraintLayoutTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DLConstraintLayoutTests-Info.plist"; sourceTree = "<group>"; };
+		C2BF8AD116F0E366005F4627 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C2BF8AD416F0E366005F4627 /* DLCLConstraintLayoutTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLCLConstraintLayoutTests.m; sourceTree = "<group>"; };
+		C2BF8AE216F0E404005F4627 /* libDLConstraintLayout.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDLConstraintLayout.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2BF8AE616F0E404005F4627 /* DLConstraintLayout-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DLConstraintLayout-Prefix.pch"; sourceTree = "<group>"; };
+		C2BF8AE716F0E404005F4627 /* DLConstraintLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLConstraintLayout.h; sourceTree = "<group>"; };
+		C2BF8AE916F0E404005F4627 /* DLConstraintLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLConstraintLayout.m; sourceTree = "<group>"; };
+		C2BF8AEE16F0E449005F4627 /* DLConstraintLayoutDemo-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "DLConstraintLayoutDemo-Info.plist"; sourceTree = "<group>"; };
+		C2BF8AEF16F0E449005F4627 /* DLConstraintLayoutDemo-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DLConstraintLayoutDemo-Prefix.pch"; sourceTree = "<group>"; };
+		C2BF8AF916F0EA92005F4627 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		C2EDF5D717A279B600F5528B /* CALayer+DLConstraintLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CALayer+DLConstraintLayout.h"; path = "DLConstraintLayout/CALayer+DLConstraintLayout.h"; sourceTree = SOURCE_ROOT; };
+		C2EDF5D817A279B600F5528B /* CALayer+DLConstraintLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "CALayer+DLConstraintLayout.m"; path = "DLConstraintLayout/CALayer+DLConstraintLayout.m"; sourceTree = SOURCE_ROOT; };
+		C2EDF5DB17A279D100F5528B /* DLCLConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DLCLConstraint.h; path = DLConstraintLayout/DLCLConstraint.h; sourceTree = SOURCE_ROOT; };
+		C2EDF5DC17A279D100F5528B /* DLCLConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DLCLConstraint.m; path = DLConstraintLayout/DLCLConstraint.m; sourceTree = SOURCE_ROOT; };
+		C2EDF5DD17A279D100F5528B /* DLCLConstraint+Protected.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "DLCLConstraint+Protected.h"; path = "DLConstraintLayout/DLCLConstraint+Protected.h"; sourceTree = SOURCE_ROOT; };
+		C2EDF5DE17A279D100F5528B /* DLCLConstraintLayoutManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DLCLConstraintLayoutManager.h; path = DLConstraintLayout/DLCLConstraintLayoutManager.h; sourceTree = SOURCE_ROOT; };
+		C2EDF5DF17A279D100F5528B /* DLCLConstraintLayoutManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DLCLConstraintLayoutManager.m; path = DLConstraintLayout/DLCLConstraintLayoutManager.m; sourceTree = SOURCE_ROOT; };
+		C2EDF5E017A279D100F5528B /* DLCLConstraintLayoutNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DLCLConstraintLayoutNode.h; path = DLConstraintLayout/DLCLConstraintLayoutNode.h; sourceTree = SOURCE_ROOT; };
+		C2EDF5E117A279D100F5528B /* DLCLConstraintLayoutNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DLCLConstraintLayoutNode.m; path = DLConstraintLayout/DLCLConstraintLayoutNode.m; sourceTree = SOURCE_ROOT; };
+		C2EDF5E217A279D100F5528B /* DLCLConstraintLayoutSolver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DLCLConstraintLayoutSolver.h; path = DLConstraintLayout/DLCLConstraintLayoutSolver.h; sourceTree = SOURCE_ROOT; };
+		C2EDF5E317A279D100F5528B /* DLCLConstraintLayoutSolver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DLCLConstraintLayoutSolver.m; path = DLConstraintLayout/DLCLConstraintLayoutSolver.m; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C25F4FC416F8900D00A8671C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C25F4FEF16F89BBF00A8671C /* QuartzCore.framework in Frameworks */,
+				C25F4FE916F8962A00A8671C /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2BF8A9A16F0E366005F4627 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2A672DA16F2CC24004062E8 /* libDLConstraintLayout.a in Frameworks */,
+				C2A672DB16F2CC37004062E8 /* QuartzCore.framework in Frameworks */,
+				C2BF8AA116F0E366005F4627 /* UIKit.framework in Frameworks */,
+				C2BF8AA316F0E366005F4627 /* Foundation.framework in Frameworks */,
+				C2BF8AA516F0E366005F4627 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2BF8AC216F0E366005F4627 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C25F501C16FA582200A8671C /* CoreGraphics.framework in Frameworks */,
+				C2BF8AC816F0E366005F4627 /* SenTestingKit.framework in Frameworks */,
+				C2BF8AC916F0E366005F4627 /* UIKit.framework in Frameworks */,
+				C2BF8ACA16F0E366005F4627 /* Foundation.framework in Frameworks */,
+				C25F4FF316F8E3B900A8671C /* libDLConstraintLayout.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2BF8ADF16F0E404005F4627 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2BF8AFA16F0EA92005F4627 /* QuartzCore.framework in Frameworks */,
+				C2BF8AE316F0E404005F4627 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C25F4FA716F88EDE00A8671C /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C25F4FA816F88EDE00A8671C /* AppKit.framework */,
+				C25F4FA916F88EDE00A8671C /* CoreData.framework */,
+				C25F4FAA16F88EDE00A8671C /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		C25F4FC916F8900D00A8671C /* DLConstraintLayoutDemoOSX */ = {
+			isa = PBXGroup;
+			children = (
+				C25F4FD516F8900D00A8671C /* DLCLAppDelegate.h */,
+				C25F4FD616F8900D00A8671C /* DLCLAppDelegate.m */,
+				C25F4FD816F8900E00A8671C /* MainMenu.xib */,
+				C25F4FCA16F8900D00A8671C /* Supporting Files */,
+			);
+			path = DLConstraintLayoutDemoOSX;
+			sourceTree = "<group>";
+		};
+		C25F4FCA16F8900D00A8671C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C25F4FCB16F8900D00A8671C /* DLConstraintLayoutDemoOSX-Info.plist */,
+				C25F4FCC16F8900D00A8671C /* InfoPlist.strings */,
+				C25F4FCF16F8900D00A8671C /* main.m */,
+				C25F4FD116F8900D00A8671C /* DLConstraintLayoutDemoOSX-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C25F4FDE16F8905000A8671C /* DLConstraintLayoutDemoShared */ = {
+			isa = PBXGroup;
+			children = (
+				C25F4FEA16F897E400A8671C /* DLCLViewController.h */,
+				C25F4FEB16F897E500A8671C /* DLCLViewController.m */,
+			);
+			path = DLConstraintLayoutDemoShared;
+			sourceTree = "<group>";
+		};
+		C2BF8A9416F0E366005F4627 = {
+			isa = PBXGroup;
+			children = (
+				C2BF8AE416F0E404005F4627 /* DLConstraintLayout */,
+				C2BF8ACD16F0E366005F4627 /* DLConstraintLayoutTests */,
+				C25F4FDE16F8905000A8671C /* DLConstraintLayoutDemoShared */,
+				C2BF8AA616F0E366005F4627 /* DLConstraintLayoutDemo */,
+				C25F4FC916F8900D00A8671C /* DLConstraintLayoutDemoOSX */,
+				C2BF8A9F16F0E366005F4627 /* Frameworks */,
+				C2BF8A9E16F0E366005F4627 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C2BF8A9E16F0E366005F4627 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C2BF8A9D16F0E366005F4627 /* DLConstraintLayoutDemo.app */,
+				C2BF8AC616F0E366005F4627 /* DLConstraintLayoutTests.octest */,
+				C2BF8AE216F0E404005F4627 /* libDLConstraintLayout.a */,
+				C25F4FC716F8900D00A8671C /* DLConstraintLayoutDemoOSX.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C2BF8A9F16F0E366005F4627 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C2BF8AA016F0E366005F4627 /* UIKit.framework */,
+				C2BF8AA216F0E366005F4627 /* Foundation.framework */,
+				C2BF8AF916F0EA92005F4627 /* QuartzCore.framework */,
+				C2BF8AA416F0E366005F4627 /* CoreGraphics.framework */,
+				C2BF8AC716F0E366005F4627 /* SenTestingKit.framework */,
+				C25F4FE816F8962A00A8671C /* Cocoa.framework */,
+				C25F4FEE16F89BBF00A8671C /* QuartzCore.framework */,
+				C25F4FA716F88EDE00A8671C /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C2BF8AA616F0E366005F4627 /* DLConstraintLayoutDemo */ = {
+			isa = PBXGroup;
+			children = (
+				C2BF8AAF16F0E366005F4627 /* DLCLAppDelegate.h */,
+				C2BF8AB016F0E366005F4627 /* DLCLAppDelegate.m */,
+				C2BF8AB816F0E366005F4627 /* MainStoryboard_iPhone.storyboard */,
+				C2BF8ABB16F0E366005F4627 /* MainStoryboard_iPad.storyboard */,
+				C2BF8AA716F0E366005F4627 /* Supporting Files */,
+			);
+			path = DLConstraintLayoutDemo;
+			sourceTree = "<group>";
+		};
+		C2BF8AA716F0E366005F4627 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C2BF8AEE16F0E449005F4627 /* DLConstraintLayoutDemo-Info.plist */,
+				C2BF8AEF16F0E449005F4627 /* DLConstraintLayoutDemo-Prefix.pch */,
+				C2BF8AA916F0E366005F4627 /* InfoPlist.strings */,
+				C2BF8AAC16F0E366005F4627 /* main.m */,
+				C2BF8AB216F0E366005F4627 /* Default.png */,
+				C2BF8AB416F0E366005F4627 /* Default@2x.png */,
+				C2BF8AB616F0E366005F4627 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C2BF8ACD16F0E366005F4627 /* DLConstraintLayoutTests */ = {
+			isa = PBXGroup;
+			children = (
+				C2BF8AD416F0E366005F4627 /* DLCLConstraintLayoutTests.m */,
+				C2BF8ACE16F0E366005F4627 /* Supporting Files */,
+			);
+			path = DLConstraintLayoutTests;
+			sourceTree = "<group>";
+		};
+		C2BF8ACE16F0E366005F4627 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C2BF8ACF16F0E366005F4627 /* DLConstraintLayoutTests-Info.plist */,
+				C2BF8AD016F0E366005F4627 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C2BF8AE416F0E404005F4627 /* DLConstraintLayout */ = {
+			isa = PBXGroup;
+			children = (
+				C2BF8AE716F0E404005F4627 /* DLConstraintLayout.h */,
+				C25F501D16FBBAB700A8671C /* DLConstraintLayout+Protected.h */,
+				C2BF8AE916F0E404005F4627 /* DLConstraintLayout.m */,
+				C2BF8AFD16F0EE37005F4627 /* Categories */,
+				C2BF8AF216F0E5F6005F4627 /* Classes */,
+				C2BF8AE516F0E404005F4627 /* Supporting Files */,
+			);
+			path = DLConstraintLayout;
+			sourceTree = "<group>";
+		};
+		C2BF8AE516F0E404005F4627 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C2BF8AE616F0E404005F4627 /* DLConstraintLayout-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C2BF8AF216F0E5F6005F4627 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				C2EDF5DB17A279D100F5528B /* DLCLConstraint.h */,
+				C2EDF5DC17A279D100F5528B /* DLCLConstraint.m */,
+				C2EDF5DD17A279D100F5528B /* DLCLConstraint+Protected.h */,
+				C2EDF5DE17A279D100F5528B /* DLCLConstraintLayoutManager.h */,
+				C2EDF5DF17A279D100F5528B /* DLCLConstraintLayoutManager.m */,
+				C2EDF5E017A279D100F5528B /* DLCLConstraintLayoutNode.h */,
+				C2EDF5E117A279D100F5528B /* DLCLConstraintLayoutNode.m */,
+				C2EDF5E217A279D100F5528B /* DLCLConstraintLayoutSolver.h */,
+				C2EDF5E317A279D100F5528B /* DLCLConstraintLayoutSolver.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		C2BF8AFD16F0EE37005F4627 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				C2EDF5D717A279B600F5528B /* CALayer+DLConstraintLayout.h */,
+				C2EDF5D817A279B600F5528B /* CALayer+DLConstraintLayout.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C25F4FC616F8900D00A8671C /* DLConstraintLayoutDemoOSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C25F4FDB16F8900E00A8671C /* Build configuration list for PBXNativeTarget "DLConstraintLayoutDemoOSX" */;
+			buildPhases = (
+				C25F4FC316F8900D00A8671C /* Sources */,
+				C25F4FC416F8900D00A8671C /* Frameworks */,
+				C25F4FC516F8900D00A8671C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DLConstraintLayoutDemoOSX;
+			productName = DLConstraintLayoutDemoOSX;
+			productReference = C25F4FC716F8900D00A8671C /* DLConstraintLayoutDemoOSX.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C2BF8A9C16F0E366005F4627 /* DLConstraintLayoutDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C2BF8AD816F0E366005F4627 /* Build configuration list for PBXNativeTarget "DLConstraintLayoutDemo" */;
+			buildPhases = (
+				C2BF8A9916F0E366005F4627 /* Sources */,
+				C2BF8A9A16F0E366005F4627 /* Frameworks */,
+				C2BF8A9B16F0E366005F4627 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C2A672D916F2CC20004062E8 /* PBXTargetDependency */,
+			);
+			name = DLConstraintLayoutDemo;
+			productName = DLConstraintLayout;
+			productReference = C2BF8A9D16F0E366005F4627 /* DLConstraintLayoutDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C2BF8AC516F0E366005F4627 /* DLConstraintLayoutTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C2BF8ADB16F0E366005F4627 /* Build configuration list for PBXNativeTarget "DLConstraintLayoutTests" */;
+			buildPhases = (
+				C2BF8AC116F0E366005F4627 /* Sources */,
+				C2BF8AC216F0E366005F4627 /* Frameworks */,
+				C2BF8AC316F0E366005F4627 /* Resources */,
+				C2BF8AC416F0E366005F4627 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C25F4FF216F8E3A900A8671C /* PBXTargetDependency */,
+			);
+			name = DLConstraintLayoutTests;
+			productName = DLConstraintLayoutTests;
+			productReference = C2BF8AC616F0E366005F4627 /* DLConstraintLayoutTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+		C2BF8AE116F0E404005F4627 /* DLConstraintLayout */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C2BF8AEB16F0E404005F4627 /* Build configuration list for PBXNativeTarget "DLConstraintLayout" */;
+			buildPhases = (
+				C2BF8ADE16F0E404005F4627 /* Sources */,
+				C2BF8ADF16F0E404005F4627 /* Frameworks */,
+				C2BF8AE016F0E404005F4627 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DLConstraintLayout;
+			productName = DLConstraintLayout;
+			productReference = C2BF8AE216F0E404005F4627 /* libDLConstraintLayout.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C2BF8A9516F0E366005F4627 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = DL;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = Regexident;
+			};
+			buildConfigurationList = C2BF8A9816F0E366005F4627 /* Build configuration list for PBXProject "DLConstraintLayout" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C2BF8A9416F0E366005F4627;
+			productRefGroup = C2BF8A9E16F0E366005F4627 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C2BF8AE116F0E404005F4627 /* DLConstraintLayout */,
+				C2BF8AC516F0E366005F4627 /* DLConstraintLayoutTests */,
+				C2BF8A9C16F0E366005F4627 /* DLConstraintLayoutDemo */,
+				C25F4FC616F8900D00A8671C /* DLConstraintLayoutDemoOSX */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C25F4FC516F8900D00A8671C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C25F4FCE16F8900D00A8671C /* InfoPlist.strings in Resources */,
+				C25F4FDA16F8900E00A8671C /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2BF8A9B16F0E366005F4627 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2BF8AAB16F0E366005F4627 /* InfoPlist.strings in Resources */,
+				C2BF8AB316F0E366005F4627 /* Default.png in Resources */,
+				C2BF8AB516F0E366005F4627 /* Default@2x.png in Resources */,
+				C2BF8AB716F0E366005F4627 /* Default-568h@2x.png in Resources */,
+				C2BF8ABA16F0E366005F4627 /* MainStoryboard_iPhone.storyboard in Resources */,
+				C2BF8ABD16F0E366005F4627 /* MainStoryboard_iPad.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2BF8AC316F0E366005F4627 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2BF8AD216F0E366005F4627 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C2BF8AC416F0E366005F4627 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C25F4FC316F8900D00A8671C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C25F4FD016F8900D00A8671C /* main.m in Sources */,
+				C25F4FD716F8900D00A8671C /* DLCLAppDelegate.m in Sources */,
+				C25F4FED16F897E500A8671C /* DLCLViewController.m in Sources */,
+				C25F501E16FBCBEC00A8671C /* DLConstraintLayout.m in Sources */,
+				C2EDF5DA17A279B600F5528B /* CALayer+DLConstraintLayout.m in Sources */,
+				C2EDF5E517A279D100F5528B /* DLCLConstraint.m in Sources */,
+				C2EDF5E717A279D100F5528B /* DLCLConstraintLayoutManager.m in Sources */,
+				C2EDF5E917A279D100F5528B /* DLCLConstraintLayoutNode.m in Sources */,
+				C2EDF5EB17A279D100F5528B /* DLCLConstraintLayoutSolver.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2BF8A9916F0E366005F4627 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2BF8AAD16F0E366005F4627 /* main.m in Sources */,
+				C2BF8AB116F0E366005F4627 /* DLCLAppDelegate.m in Sources */,
+				C25F4FEC16F897E500A8671C /* DLCLViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2BF8AC116F0E366005F4627 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2BF8AD516F0E366005F4627 /* DLCLConstraintLayoutTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2BF8ADE16F0E404005F4627 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2BF8AEA16F0E404005F4627 /* DLConstraintLayout.m in Sources */,
+				C2EDF5D917A279B600F5528B /* CALayer+DLConstraintLayout.m in Sources */,
+				C2EDF5E417A279D100F5528B /* DLCLConstraint.m in Sources */,
+				C2EDF5E617A279D100F5528B /* DLCLConstraintLayoutManager.m in Sources */,
+				C2EDF5E817A279D100F5528B /* DLCLConstraintLayoutNode.m in Sources */,
+				C2EDF5EA17A279D100F5528B /* DLCLConstraintLayoutSolver.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C25F4FF216F8E3A900A8671C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C2BF8AE116F0E404005F4627 /* DLConstraintLayout */;
+			targetProxy = C25F4FF116F8E3A900A8671C /* PBXContainerItemProxy */;
+		};
+		C2A672D916F2CC20004062E8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C2BF8AE116F0E404005F4627 /* DLConstraintLayout */;
+			targetProxy = C2A672D816F2CC20004062E8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C25F4FCC16F8900D00A8671C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C25F4FCD16F8900D00A8671C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C25F4FD816F8900E00A8671C /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C25F4FD916F8900E00A8671C /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		C2BF8AA916F0E366005F4627 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C2BF8AAA16F0E366005F4627 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C2BF8AB816F0E366005F4627 /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C2BF8AB916F0E366005F4627 /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		C2BF8ABB16F0E366005F4627 /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C2BF8ABC16F0E366005F4627 /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		C2BF8AD016F0E366005F4627 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C2BF8AD116F0E366005F4627 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C25F4FDC16F8900E00A8671C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DLConstraintLayoutDemoOSX/DLConstraintLayoutDemoOSX-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				INFOPLIST_FILE = "DLConstraintLayoutDemoOSX/DLConstraintLayoutDemoOSX-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C25F4FDD16F8900E00A8671C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DLConstraintLayoutDemoOSX/DLConstraintLayoutDemoOSX-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				INFOPLIST_FILE = "DLConstraintLayoutDemoOSX/DLConstraintLayoutDemoOSX-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C2BF8AD616F0E366005F4627 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "-DDLCL_USE_NATIVE_CA_NAMESPACE";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C2BF8AD716F0E366005F4627 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = (
+					"-DDLCL_USE_NATIVE_CA_NAMESPACE",
+					"-DNS_BLOCK_ASSERTIONS=1",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C2BF8AD916F0E366005F4627 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DLConstraintLayoutDemo/DLConstraintLayoutDemo-Prefix.pch";
+				INFOPLIST_FILE = "DLConstraintLayoutDemo/DLConstraintLayoutDemo-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C2BF8ADA16F0E366005F4627 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DLConstraintLayoutDemo/DLConstraintLayoutDemo-Prefix.pch";
+				INFOPLIST_FILE = "DLConstraintLayoutDemo/DLConstraintLayoutDemo-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C2BF8ADC16F0E366005F4627 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DLConstraintLayoutDemo.app/DLConstraintLayoutDemo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DLConstraintLayout/DLConstraintLayout-Prefix.pch";
+				INFOPLIST_FILE = "DLConstraintLayoutTests/DLConstraintLayoutTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		C2BF8ADD16F0E366005F4627 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DLConstraintLayoutDemo.app/DLConstraintLayoutDemo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DLConstraintLayout/DLConstraintLayout-Prefix.pch";
+				INFOPLIST_FILE = "DLConstraintLayoutTests/DLConstraintLayoutTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+		C2BF8AEC16F0E404005F4627 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				DSTROOT = /tmp/DLConstraintLayout.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DLConstraintLayout/DLConstraintLayout-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		C2BF8AED16F0E404005F4627 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				DSTROOT = /tmp/DLConstraintLayout.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DLConstraintLayout/DLConstraintLayout-Prefix.pch";
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C25F4FDB16F8900E00A8671C /* Build configuration list for PBXNativeTarget "DLConstraintLayoutDemoOSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C25F4FDC16F8900E00A8671C /* Debug */,
+				C25F4FDD16F8900E00A8671C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C2BF8A9816F0E366005F4627 /* Build configuration list for PBXProject "DLConstraintLayout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2BF8AD616F0E366005F4627 /* Debug */,
+				C2BF8AD716F0E366005F4627 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C2BF8AD816F0E366005F4627 /* Build configuration list for PBXNativeTarget "DLConstraintLayoutDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2BF8AD916F0E366005F4627 /* Debug */,
+				C2BF8ADA16F0E366005F4627 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C2BF8ADB16F0E366005F4627 /* Build configuration list for PBXNativeTarget "DLConstraintLayoutTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2BF8ADC16F0E366005F4627 /* Debug */,
+				C2BF8ADD16F0E366005F4627 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C2BF8AEB16F0E404005F4627 /* Build configuration list for PBXNativeTarget "DLConstraintLayout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2BF8AEC16F0E404005F4627 /* Debug */,
+				C2BF8AED16F0E404005F4627 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C2BF8A9516F0E366005F4627 /* Project object */;
+}
