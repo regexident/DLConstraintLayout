@@ -2,7 +2,7 @@
 
 Open Source, **API compatible** replacement of **CAConstraint**/**CAConstraintLayoutManager** for **iOS**.
 
-While Core Animation `CALayer`s on **OS X** support constraint-based layout handling (also known as **Auto Layout**), **iOS** lacks support for said technology, despite providing it for UIViews.
+While Core Animation `CALayer`s on **OS X** support constraint-based layout handling, **iOS** lacks support for said technology, despite providing it for UIViews.
 
 **DLConstraintLayout** aims to **fill that gap** by providing **drop-in replacements** for the missing [`CAConstraint`](https://developer.apple.com/library/mac/#documentation/GraphicsImaging/Reference/CAConstraint_class/Introduction/Introduction.html)/[`CAConstraintLayoutManager`](https://developer.apple.com/library/mac/#documentation/GraphicsImaging/Reference/CAConstraintLayoutManager_class/Introduction/Introduction.html) classes for iOS.
 
@@ -14,7 +14,7 @@ Benchmarks showed **DLConstraintLayout++** being on average ~7x faster than **DL
 
 ## How to use it
 
-Let's assume for a moment that you have a `CALayer` hierarchy that you want to layout using **Auto Layout**.
+Let's assume for a moment that you have a `CALayer` hierarchy that you want to layout using constraints.
 
 On **OS X** you'd [end up with layout code](https://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/CoreAnimation_guide/BuildingaLayerHierarchy/BuildingaLayerHierarchy.html#//apple_ref/doc/uid/TP40004514-CH6-SW2) akin to this:
 
