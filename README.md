@@ -6,6 +6,12 @@ While Core Animation `CALayer`s on **OS X** support constraint-based layout hand
 
 **DLConstraintLayout** aims to **fill that gap** by providing **drop-in replacements** for the missing [`CAConstraint`](https://developer.apple.com/library/mac/#documentation/GraphicsImaging/Reference/CAConstraint_class/Introduction/Introduction.html)/[`CAConstraintLayoutManager`](https://developer.apple.com/library/mac/#documentation/GraphicsImaging/Reference/CAConstraintLayoutManager_class/Introduction/Introduction.html) classes for iOS.
 
+## Differences to [DLConstraintLayout++](https://github.com/regexident/DLConstraintLayoutPlusPlus) project
+
+While **DLConstraintLayout++** provides the very same public API as [**DLConstraintLayout**](https://github.com/regexident/DLConstraintLayout), its internal implementations differs in that it makes use of Objective-C++.
+
+Benchmarks showed **DLConstraintLayout++** being on average ~7x faster than **DLConstraintLayout**.
+
 ## How to use it
 
 Let's assume for a moment that you have a `CALayer` hierarchy that you want to layout using **Auto Layout**.
@@ -29,6 +35,8 @@ Well, all you'd need to do is this:
 3. **Copy & paste** your code that's using **OS X**'s `CAConstraint`s into your iOS project and:
 4. Either: **Replace all occurences** of the `CA` prefix with `DLCL…` (and `kCA…` with `kDLCL…` respectively). (Regex substitution: `s/(?<=\bk?)CA(?=Constraint)/DLCL/g`)
 5. Or: **Add** `-DDLCL_USE_NATIVE_CA_NAMESPACE` to your project's **Other C Flags** and just **use the code and prefixes as is. No changes necessary.**
+
+The code **stays the same**!
 
 For more info see the included iOS/OSX demos.
 
