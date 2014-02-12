@@ -55,22 +55,18 @@
 }
 
 - (BOOL)hasDependencyTo:(DLCLConstraintLayoutNode *)node {
-	CALayer *superlayer = self.layer.superlayer;
 	BOOL hasDependency = NO;
 	for (DLCLConstraint *constraint in self.constraints) {
-		CALayer *sourceLayer = [constraint sourceLayerInSuperlayer:superlayer];
+		CALayer *sourceLayer = constraint.sourceLayer;
 		if (sourceLayer != node.layer) {
 			continue;
 		}
-		DLCLConstraintAxis sourceAxis;
-		if (![constraint getSourceAxis:&sourceAxis axisAttribute:NULL]) {
-			continue;
-		}
+		DLCLConstraintAxis sourceAxis = DLCLConstraintAttributeGetAxis(constraint.sourceAttribute);
 		for (DLCLConstraint *otherConstraint in self.constraints) {
-			DLCLConstraintAxis otherAxis;
-			if (![otherConstraint getSourceAxis:&otherAxis axisAttribute:NULL]) {
-				continue;
-			}
+            if (constraint == otherConstraint) {
+                continue;
+            }
+			DLCLConstraintAxis otherAxis = DLCLConstraintAttributeGetAxis(otherConstraint.attribute);
 			if (sourceAxis == otherAxis) {
 				hasDependency = YES;
 				break;

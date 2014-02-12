@@ -23,15 +23,35 @@ typedef NS_ENUM(NSUInteger, DLCLConstraintAxisAttribute) {
 	DLCLConstraintAxisAttributeSize = 3
 };
 
+typedef struct {
+    DLCLConstraintAttribute attribute;
+    DLCLConstraintAttribute source_attribute;
+    __unsafe_unretained CALayer *source_layer;
+    CGFloat scale;
+    CGFloat offset;
+} DLCLConstraintStruct;
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+    
+    DLCLConstraintStruct DLCLConstraintStructMake(DLCLConstraintAttribute attribute, DLCLConstraintAttribute source_attribute, CALayer *source_layer, CGFloat scale, CGFloat offset);
+    
+    DLCLConstraintAxis DLCLConstraintAttributeGetAxis(DLCLConstraintAttribute attribute);
+    DLCLConstraintAxisAttribute DLCLConstraintAttributeGetAxisAttribute(DLCLConstraintAttribute attribute);
+    
+#ifdef __cplusplus
+}
+#endif
+
 @interface DLCLConstraint ()
 
+@property (readonly, assign, nonatomic) DLCLConstraintStruct constraintStruct;
+@property (readonly, strong, nonatomic) CALayer *sourceLayer;
+
+- (CALayer *)detectSourceLayerInSuperlayer:(CALayer *)superlayer;
+
 - (BOOL)isEqualToConstraint:(DLCLConstraint *)constraint;
-
-+ (BOOL)getAxis:(DLCLConstraintAxis *)axis axisAttribute:(DLCLConstraintAxisAttribute *)axisAttribute fromAttribute:(DLCLConstraintAttribute)attribute;
-- (BOOL)getAxis:(DLCLConstraintAxis *)axis axisAttribute:(DLCLConstraintAxisAttribute *)axisAttribute;
-- (BOOL)getSourceAxis:(DLCLConstraintAxis *)axis axisAttribute:(DLCLConstraintAxisAttribute *)axisAttribute;
-
-- (CALayer *)sourceLayerInSuperlayer:(CALayer *)superlayer;
 
 @end
 

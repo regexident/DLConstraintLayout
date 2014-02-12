@@ -57,10 +57,7 @@
 			[DLCLConstraintLayoutNode nodeWithAxis:DLCLConstraintAxisY forLayer:sublayer]
 		};
 		for (DLCLConstraint *constraint in sublayer.constraints) {
-			DLCLConstraintAxis axis;
-			if (![constraint getAxis:&axis axisAttribute:NULL]) {
-				continue;
-			}
+			DLCLConstraintAxis axis = DLCLConstraintAttributeGetAxis(constraint.attribute);
 			[axisNodes[axis] addConstraint:constraint];
 		}
 		if ([axisNodes[DLCLConstraintAxisX].constraints count]) {
@@ -91,14 +88,11 @@
 	for (DLCLConstraintLayoutNode *node in self.nodes) {
 		CALayer *superlayer = node.layer.superlayer;
 		for (DLCLConstraint *constraint in node.constraints) {
-			CALayer *sourceLayer = [constraint sourceLayerInSuperlayer:superlayer];
+			CALayer *sourceLayer = [constraint detectSourceLayerInSuperlayer:superlayer];
 			if (!sourceLayer) {
 				continue;
 			}
-			DLCLConstraintAxis sourceAxis;
-			if (![constraint getSourceAxis:&sourceAxis axisAttribute:NULL]) {
-				continue;
-			}
+            DLCLConstraintAxis sourceAxis = DLCLConstraintAttributeGetAxis(constraint.sourceAttribute);
 			NSMutableDictionary *nodesByLayer = nodesByAxis[sourceAxis];
 			NSMutableArray *sourceNodes = [nodesByLayer objectForKey:[NSValue valueWithPointer:(void *)sourceLayer]];
 			for (DLCLConstraintLayoutNode *sourceNode in sourceNodes) {
@@ -150,16 +144,10 @@
 	NSMutableDictionary *sourceValuesByAxisAttribute = [NSMutableDictionary dictionary];
 	int axisAttributesMask = 0x0;
 	for (DLCLConstraint *constraint in node.constraints) {
-		DLCLConstraintAxisAttribute axisAttribute;
-		if (![constraint getAxis:NULL axisAttribute:&axisAttribute]) {
-			continue;
-		}
-		DLCLConstraintAxis sourceAxis;
-		DLCLConstraintAxisAttribute sourceAxisAttribute;
-		if (![constraint getSourceAxis:&sourceAxis axisAttribute:&sourceAxisAttribute]) {
-			continue;
-		}
-		CALayer *sourceLayer = [constraint sourceLayerInSuperlayer:superlayer];
+        DLCLConstraintAttribute attribute = constraint.attribute;
+        DLCLConstraintAttribute sourceAttribute = constraint.sourceAttribute;
+		DLCLConstraintAxisAttribute axisAttribute = DLCLConstraintAttributeGetAxisAttribute(attribute);
+		CALayer *sourceLayer = constraint.sourceLayer;
 		if (!sourceLayer) {
 			continue;
 		}
@@ -170,7 +158,7 @@
 			&CGRectGetMinX, &CGRectGetMidX, &CGRectGetMaxX, &CGRectGetWidth,
 			&CGRectGetMinY, &CGRectGetMidY, &CGRectGetMaxY, &CGRectGetHeight
 		};
-		CGFloat sourceAttributeValue = rectFunctions[constraint.sourceAttribute](sourceFrame);
+		CGFloat sourceAttributeValue = rectFunctions[sourceAttribute](sourceFrame);
 		sourceValuesByAxisAttribute[@((int)axisAttribute)] = @((sourceAttributeValue * constraint.scale) + constraint.offset);
 	}
 	layer.frame = [[self class] frame:(CGRect)frame afterSettingAttributeValues:sourceValuesByAxisAttribute onAxis:node.axis forMask:axisAttributesMask];

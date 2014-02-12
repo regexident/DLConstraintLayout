@@ -11,6 +11,19 @@
 
 #import "DLConstraintLayout+Protected.h"
 
+DLCLConstraintStruct DLCLConstraintStructMake(DLCLConstraintAttribute attribute, DLCLConstraintAttribute source_attribute, CALayer *source_layer, CGFloat scale, CGFloat offset) {
+	return (DLCLConstraintStruct){attribute, source_attribute, source_layer, scale, offset};
+}
+
+DLCLConstraintAxis DLCLConstraintAttributeGetAxis(DLCLConstraintAttribute attribute) {
+	return (attribute <= kDLCLConstraintWidth) ? DLCLConstraintAxisX : DLCLConstraintAxisY;
+}
+
+DLCLConstraintAxisAttribute DLCLConstraintAttributeGetAxisAttribute(DLCLConstraintAttribute attribute) {
+	DLCLConstraintAxis axis = DLCLConstraintAttributeGetAxis(attribute);
+	return (DLCLConstraintAxisAttribute)((axis == DLCLConstraintAxisX) ? attribute : attribute - 4);
+}
+
 NSString *DLCLConstraintAttributeMaskDescription(int attributeMask) {
 	NSString *strings[] = {@"minX", @"midX", @"maxX", @"width", @"minY", @"midY", @"maxY", @"height"};
 	NSMutableArray *attributeValues = [NSMutableArray array];
@@ -26,10 +39,6 @@ NSString *DLCLConstraintAttributeMaskDescription(int attributeMask) {
 
 @interface DLCLConstraint ()
 
-@property (readwrite, assign, nonatomic) DLCLConstraintAttribute attribute;
-@property (readwrite, assign, nonatomic) CGFloat offset;
-@property (readwrite, assign, nonatomic) CGFloat scale;
-@property (readwrite, assign, nonatomic) DLCLConstraintAttribute sourceAttribute;
 @property (readwrite, copy, nonatomic) NSString *sourceName;
 
 @end
@@ -38,26 +47,26 @@ NSString *DLCLConstraintAttributeMaskDescription(int attributeMask) {
 
 + (instancetype)constraintWithAttribute:(DLCLConstraintAttribute)attribute relativeTo:(NSString *)sourceLayer attribute:(DLCLConstraintAttribute)sourceAttribute scale:(CGFloat)scale offset:(CGFloat)offset {
 	return [(DLCLConstraint *)[self alloc] initWithAttribute:attribute
-                                                  relativeTo:sourceLayer
-                                                   attribute:sourceAttribute
-                                                       scale:scale
-                                                      offset:offset];
+												  relativeTo:sourceLayer
+												   attribute:sourceAttribute
+													   scale:scale
+													  offset:offset];
 }
 
 + (instancetype)constraintWithAttribute:(DLCLConstraintAttribute)attribute relativeTo:(NSString *)sourceLayer attribute:(DLCLConstraintAttribute)sourceAttribute offset:(CGFloat)offset {
 	return [(DLCLConstraint *)[self alloc] initWithAttribute:attribute
-                                                  relativeTo:sourceLayer
-                                                   attribute:sourceAttribute
-                                                       scale:1.0
-                                                      offset:offset];
+												  relativeTo:sourceLayer
+												   attribute:sourceAttribute
+													   scale:1.0
+													  offset:offset];
 }
 
 + (instancetype)constraintWithAttribute:(DLCLConstraintAttribute)attribute relativeTo:(NSString *)sourceLayer attribute:(DLCLConstraintAttribute)sourceAttribute {
 	return [(DLCLConstraint *)[self alloc] initWithAttribute:attribute
-                                                  relativeTo:sourceLayer
-                                                   attribute:sourceAttribute
-                                                       scale:1.0
-                                                      offset:0.0];
+												  relativeTo:sourceLayer
+												   attribute:sourceAttribute
+													   scale:1.0
+													  offset:0.0];
 }
 
 + (id)alloc {
@@ -77,13 +86,30 @@ NSString *DLCLConstraintAttributeMaskDescription(int attributeMask) {
 	NSAssert(sourceAttribute >= kDLCLConstraintMinX && sourceAttribute <= kDLCLConstraintHeight, @"Method argument 'sourceAttribute' must be of known value.");
 	self = [self init];
 	if (self) {
-		self.attribute = attribute;
+		self.constraintStruct = DLCLConstraintStructMake(attribute, sourceAttribute, nil, scale, offset);
 		self.sourceName = sourceLayer;
-		self.sourceAttribute = sourceAttribute;
-		self.offset = offset;
-		self.scale = scale;
 	}
 	return self;
+}
+
+- (void)setConstraintStruct:(DLCLConstraintStruct)constraintStruct {
+	_constraintStruct = constraintStruct;
+}
+
+- (DLCLConstraintAttribute)attribute {
+	return self.constraintStruct.attribute;
+}
+
+- (CGFloat)offset {
+	return self.constraintStruct.offset;
+}
+
+- (CGFloat)scale {
+	return self.constraintStruct.scale;
+}
+
+- (DLCLConstraintAttribute)sourceAttribute {
+	return self.constraintStruct.source_attribute;
 }
 
 - (BOOL)isEqualToConstraint:(DLCLConstraint *)constraint {
@@ -101,27 +127,40 @@ NSString *DLCLConstraintAttributeMaskDescription(int attributeMask) {
 	return [self isEqualToConstraint:(DLCLConstraint *)object];
 }
 
-+ (BOOL)getAxis:(DLCLConstraintAxis *)axisBuffer axisAttribute:(DLCLConstraintAxisAttribute *)axisAttributeBuffer fromAttribute:(DLCLConstraintAttribute)attribute {
-	if (attribute < kDLCLConstraintMinX || attribute > kDLCLConstraintHeight) {
-		return NO;
+- (BOOL)getAxis:(DLCLConstraintAxis *)axis axisAttribute:(DLCLConstraintAxisAttribute *)axisAttribute {
+	DLCLConstraintAttribute attribute = self.attribute;
+	DLCLConstraintAxis attributeAxis = DLCLConstraintAttributeGetAxis(attribute);
+	if (axis) {
+		*axis = attributeAxis;
 	}
-	DLCLConstraintAxis axis = (attribute <= kDLCLConstraintWidth) ? DLCLConstraintAxisX : DLCLConstraintAxisY;
-	if (axisBuffer) {
-		*axisBuffer = axis;
-	}
-	if (axisAttributeBuffer) {
-		DLCLConstraintAxisAttribute axisAttribute = (DLCLConstraintAxisAttribute)((axis == DLCLConstraintAxisX) ? attribute : attribute - 4);
-		*axisAttributeBuffer = axisAttribute;
+	if (axisAttribute) {
+		*axisAttribute = DLCLConstraintAttributeGetAxisAttribute(attribute);
 	}
 	return YES;
 }
 
-- (BOOL)getAxis:(DLCLConstraintAxis *)axis axisAttribute:(DLCLConstraintAxisAttribute *)axisAttribute {
-	return [[self class] getAxis:axis axisAttribute:axisAttribute fromAttribute:self.attribute];
+- (BOOL)getSourceAxis:(DLCLConstraintAxis *)axis axisAttribute:(DLCLConstraintAxisAttribute *)axisAttribute {
+	DLCLConstraintAttribute attribute = self.sourceAttribute;
+	DLCLConstraintAxis attributeAxis = DLCLConstraintAttributeGetAxis(attribute);
+	if (axis) {
+		*axis = attributeAxis;
+	}
+	if (axisAttribute) {
+		*axisAttribute = DLCLConstraintAttributeGetAxisAttribute(attribute);
+	}
+	return YES;
 }
 
-- (BOOL)getSourceAxis:(DLCLConstraintAxis *)axis axisAttribute:(DLCLConstraintAxisAttribute *)axisAttribute {
-	return [[self class] getAxis:axis axisAttribute:axisAttribute fromAttribute:self.sourceAttribute];
+- (CALayer *)sourceLayer {
+	return self.constraintStruct.source_layer;
+}
+
+- (CALayer *)detectSourceLayerInSuperlayer:(CALayer *)superlayer {
+	CALayer *sourceLayer = [self sourceLayerInSuperlayer:superlayer];
+	DLCLConstraintStruct constraintStruct = self.constraintStruct;
+	constraintStruct.source_layer = sourceLayer;
+	self.constraintStruct = constraintStruct;
+	return sourceLayer;
 }
 
 - (CALayer *)sourceLayerInSuperlayer:(CALayer *)superlayer {
