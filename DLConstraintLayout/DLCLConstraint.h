@@ -24,11 +24,13 @@ typedef enum : int {
 
 @protocol DLCLConstraint <NSObject>
 
-@property (readonly, assign, nonatomic) DLCLConstraintAttribute attribute;
-@property (readonly, assign, nonatomic) CGFloat offset;
-@property (readonly, assign, nonatomic) CGFloat scale;
-@property (readonly, assign, nonatomic) DLCLConstraintAttribute sourceAttribute;
-@property (readonly, copy, nonatomic) NSString *sourceName;
+// These must match those from CAConstraint:
+// https://developer.apple.com/library/mac/DOCUMENTATION/GraphicsImaging/Reference/CAConstraint_class/Introduction/Introduction.html
+@property (readonly) DLCLConstraintAttribute attribute;
+@property (readonly) CGFloat offset;
+@property (readonly) CGFloat scale;
+@property (readonly) DLCLConstraintAttribute sourceAttribute;
+@property (readonly) NSString *sourceName;
 
 + (instancetype)constraintWithAttribute:(DLCLConstraintAttribute)attr relativeTo:(NSString *)srcLayer attribute:(DLCLConstraintAttribute)srcAttr scale:(CGFloat)scale offset:(CGFloat)offset;
 + (instancetype)constraintWithAttribute:(DLCLConstraintAttribute)attr relativeTo:(NSString *)srcLayer attribute:(DLCLConstraintAttribute)srcAttr offset:(CGFloat)offset;

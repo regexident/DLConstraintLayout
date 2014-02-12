@@ -30,6 +30,7 @@ BOOL DLCLClassImplementsProtocolProperties(Class aClass, Protocol *aProtocol) {
 		NSString *propertyName = [NSString stringWithCString:property_getName(protocolProperties[i]) encoding:NSUTF8StringEncoding];
 		NSString *propertyAttributes = [NSString stringWithCString:property_getAttributes(protocolProperties[i]) encoding:NSUTF8StringEncoding];
 		if (![propertyAttributesByName[propertyName] isEqualToString:propertyAttributes]) {
+            NSLog(@"Property '%@' in class '%@' does not match protocol '%@'.", propertyName, NSStringFromClass(aClass), NSStringFromProtocol(aProtocol));
 			implementsProtocol = NO;
 			break;
 		}
@@ -55,6 +56,7 @@ BOOL DLCLClassImplementsProtocolMethods(Class aClass, Protocol *aProtocol, BOOL 
 		NSString *methodName = NSStringFromSelector(protocolMethods[i].name);
 		NSString *methodAttributes = [NSString stringWithCString:protocolMethods[i].types encoding:NSUTF8StringEncoding];
 		if (![methodAttributesByName[methodName] isEqualToString:methodAttributes]) {
+            NSLog(@"Method '%@' in class '%@' does not match protocol '%@'.", methodName, NSStringFromClass(aClass), NSStringFromProtocol(aProtocol));
 			implementsProtocol = NO;
 			break;
 		}
