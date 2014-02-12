@@ -35,10 +35,10 @@ typedef struct {
 extern "C" {
 #endif
     
-    DLCLConstraintStruct DLCLConstraintStructMake(DLCLConstraintAttribute attribute, DLCLConstraintAttribute source_attribute, CALayer *source_layer, CGFloat scale, CGFloat offset);
+DLCLConstraintStruct DLCLConstraintStructMake(DLCLConstraintAttribute attribute, DLCLConstraintAttribute source_attribute, CALayer *source_layer, CGFloat scale, CGFloat offset);
     
-    DLCLConstraintAxis DLCLConstraintAttributeGetAxis(DLCLConstraintAttribute attribute);
-    DLCLConstraintAxisAttribute DLCLConstraintAttributeGetAxisAttribute(DLCLConstraintAttribute attribute);
+DLCLConstraintAxis DLCLConstraintAttributeGetAxis(DLCLConstraintAttribute attribute);
+DLCLConstraintAxisAttribute DLCLConstraintAttributeGetAxisAttribute(DLCLConstraintAttribute attribute);
     
 #ifdef __cplusplus
 }

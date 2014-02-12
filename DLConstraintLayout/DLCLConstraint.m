@@ -12,11 +12,11 @@
 #import "DLConstraintLayout+Protected.h"
 
 DLCLConstraintStruct DLCLConstraintStructMake(DLCLConstraintAttribute attribute, DLCLConstraintAttribute source_attribute, CALayer *source_layer, CGFloat scale, CGFloat offset) {
-	return (DLCLConstraintStruct){attribute, source_attribute, source_layer, scale, offset};
+    return (DLCLConstraintStruct){attribute, source_attribute, source_layer, scale, offset};
 }
 
 DLCLConstraintAxis DLCLConstraintAttributeGetAxis(DLCLConstraintAttribute attribute) {
-	return (attribute <= kDLCLConstraintWidth) ? DLCLConstraintAxisX : DLCLConstraintAxisY;
+    return (attribute <= kDLCLConstraintWidth) ? DLCLConstraintAxisX : DLCLConstraintAxisY;
 }
 
 DLCLConstraintAxisAttribute DLCLConstraintAttributeGetAxisAttribute(DLCLConstraintAttribute attribute) {
@@ -47,26 +47,26 @@ NSString *DLCLConstraintAttributeMaskDescription(int attributeMask) {
 
 + (instancetype)constraintWithAttribute:(DLCLConstraintAttribute)attribute relativeTo:(NSString *)sourceLayer attribute:(DLCLConstraintAttribute)sourceAttribute scale:(CGFloat)scale offset:(CGFloat)offset {
 	return [(DLCLConstraint *)[self alloc] initWithAttribute:attribute
-												  relativeTo:sourceLayer
-												   attribute:sourceAttribute
-													   scale:scale
-													  offset:offset];
+                                                  relativeTo:sourceLayer
+                                                   attribute:sourceAttribute
+                                                       scale:scale
+                                                      offset:offset];
 }
 
 + (instancetype)constraintWithAttribute:(DLCLConstraintAttribute)attribute relativeTo:(NSString *)sourceLayer attribute:(DLCLConstraintAttribute)sourceAttribute offset:(CGFloat)offset {
 	return [(DLCLConstraint *)[self alloc] initWithAttribute:attribute
-												  relativeTo:sourceLayer
-												   attribute:sourceAttribute
-													   scale:1.0
-													  offset:offset];
+                                                  relativeTo:sourceLayer
+                                                   attribute:sourceAttribute
+                                                       scale:1.0
+                                                      offset:offset];
 }
 
 + (instancetype)constraintWithAttribute:(DLCLConstraintAttribute)attribute relativeTo:(NSString *)sourceLayer attribute:(DLCLConstraintAttribute)sourceAttribute {
 	return [(DLCLConstraint *)[self alloc] initWithAttribute:attribute
-												  relativeTo:sourceLayer
-												   attribute:sourceAttribute
-													   scale:1.0
-													  offset:0.0];
+                                                  relativeTo:sourceLayer
+                                                   attribute:sourceAttribute
+                                                       scale:1.0
+                                                      offset:0.0];
 }
 
 + (id)alloc {
