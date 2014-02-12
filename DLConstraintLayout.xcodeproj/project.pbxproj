@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A4AF623318AB8CB7003344C0 /* DLCLConstraintLayoutSolver.mm in Sources */ = {isa = PBXBuildFile; fileRef = A4AF623218AB8CB7003344C0 /* DLCLConstraintLayoutSolver.mm */; };
+		A4AF623418AB8EB9003344C0 /* DLCLConstraintLayoutSolver.mm in Sources */ = {isa = PBXBuildFile; fileRef = A4AF623218AB8CB7003344C0 /* DLCLConstraintLayoutSolver.mm */; };
 		C25F4FCE16F8900D00A8671C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C25F4FCC16F8900D00A8671C /* InfoPlist.strings */; };
 		C25F4FD016F8900D00A8671C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C25F4FCF16F8900D00A8671C /* main.m */; };
 		C25F4FD716F8900D00A8671C /* DLCLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C25F4FD616F8900D00A8671C /* DLCLAppDelegate.m */; };
@@ -48,8 +50,6 @@
 		C2EDF5E717A279D100F5528B /* DLCLConstraintLayoutManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C2EDF5DF17A279D100F5528B /* DLCLConstraintLayoutManager.m */; };
 		C2EDF5E817A279D100F5528B /* DLCLConstraintLayoutNode.m in Sources */ = {isa = PBXBuildFile; fileRef = C2EDF5E117A279D100F5528B /* DLCLConstraintLayoutNode.m */; };
 		C2EDF5E917A279D100F5528B /* DLCLConstraintLayoutNode.m in Sources */ = {isa = PBXBuildFile; fileRef = C2EDF5E117A279D100F5528B /* DLCLConstraintLayoutNode.m */; };
-		C2EDF5EA17A279D100F5528B /* DLCLConstraintLayoutSolver.m in Sources */ = {isa = PBXBuildFile; fileRef = C2EDF5E317A279D100F5528B /* DLCLConstraintLayoutSolver.m */; };
-		C2EDF5EB17A279D100F5528B /* DLCLConstraintLayoutSolver.m in Sources */ = {isa = PBXBuildFile; fileRef = C2EDF5E317A279D100F5528B /* DLCLConstraintLayoutSolver.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +83,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A4AF623218AB8CB7003344C0 /* DLCLConstraintLayoutSolver.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = DLCLConstraintLayoutSolver.mm; path = DLConstraintLayout/DLCLConstraintLayoutSolver.mm; sourceTree = SOURCE_ROOT; };
 		C25F4FA816F88EDE00A8671C /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		C25F4FA916F88EDE00A8671C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		C25F4FAA16F88EDE00A8671C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -134,7 +135,6 @@
 		C2EDF5E017A279D100F5528B /* DLCLConstraintLayoutNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DLCLConstraintLayoutNode.h; path = DLConstraintLayout/DLCLConstraintLayoutNode.h; sourceTree = SOURCE_ROOT; };
 		C2EDF5E117A279D100F5528B /* DLCLConstraintLayoutNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DLCLConstraintLayoutNode.m; path = DLConstraintLayout/DLCLConstraintLayoutNode.m; sourceTree = SOURCE_ROOT; };
 		C2EDF5E217A279D100F5528B /* DLCLConstraintLayoutSolver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DLCLConstraintLayoutSolver.h; path = DLConstraintLayout/DLCLConstraintLayoutSolver.h; sourceTree = SOURCE_ROOT; };
-		C2EDF5E317A279D100F5528B /* DLCLConstraintLayoutSolver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DLCLConstraintLayoutSolver.m; path = DLConstraintLayout/DLCLConstraintLayoutSolver.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -339,7 +339,7 @@
 				C2EDF5E017A279D100F5528B /* DLCLConstraintLayoutNode.h */,
 				C2EDF5E117A279D100F5528B /* DLCLConstraintLayoutNode.m */,
 				C2EDF5E217A279D100F5528B /* DLCLConstraintLayoutSolver.h */,
-				C2EDF5E317A279D100F5528B /* DLCLConstraintLayoutSolver.m */,
+				A4AF623218AB8CB7003344C0 /* DLCLConstraintLayoutSolver.mm */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -433,7 +433,7 @@
 		C2BF8A9516F0E366005F4627 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = DL;
+				CLASSPREFIX = DLCL;
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = Regexident;
 			};
@@ -516,10 +516,10 @@
 				C25F4FED16F897E500A8671C /* DLCLViewController.m in Sources */,
 				C25F501E16FBCBEC00A8671C /* DLConstraintLayout.m in Sources */,
 				C2EDF5DA17A279B600F5528B /* CALayer+DLConstraintLayout.m in Sources */,
+				A4AF623418AB8EB9003344C0 /* DLCLConstraintLayoutSolver.mm in Sources */,
 				C2EDF5E517A279D100F5528B /* DLCLConstraint.m in Sources */,
 				C2EDF5E717A279D100F5528B /* DLCLConstraintLayoutManager.m in Sources */,
 				C2EDF5E917A279D100F5528B /* DLCLConstraintLayoutNode.m in Sources */,
-				C2EDF5EB17A279D100F5528B /* DLCLConstraintLayoutSolver.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -550,7 +550,7 @@
 				C2EDF5E417A279D100F5528B /* DLCLConstraint.m in Sources */,
 				C2EDF5E617A279D100F5528B /* DLCLConstraintLayoutManager.m in Sources */,
 				C2EDF5E817A279D100F5528B /* DLCLConstraintLayoutNode.m in Sources */,
-				C2EDF5EA17A279D100F5528B /* DLCLConstraintLayoutSolver.m in Sources */,
+				A4AF623318AB8CB7003344C0 /* DLCLConstraintLayoutSolver.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -685,7 +685,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
-					"$(inherited)",
+					DLCL_USE_CPP_SOLVER,
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -732,7 +732,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DLConstraintLayoutDemo/DLConstraintLayoutDemo-Prefix.pch";
 				INFOPLIST_FILE = "DLConstraintLayoutDemo/DLConstraintLayoutDemo-Info.plist";
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-lc++",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -744,7 +747,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DLConstraintLayoutDemo/DLConstraintLayoutDemo-Prefix.pch";
 				INFOPLIST_FILE = "DLConstraintLayoutDemo/DLConstraintLayoutDemo-Info.plist";
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-lc++",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -791,6 +797,7 @@
 				DSTROOT = /tmp/DLConstraintLayout.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DLConstraintLayout/DLConstraintLayout-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

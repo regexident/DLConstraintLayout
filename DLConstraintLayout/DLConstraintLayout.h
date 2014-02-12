@@ -33,16 +33,14 @@ typedef DLCLConstraintAttribute CAConstraintAttribute;
 
 #endif
 
-#endif
-
 @interface DLConstraintLayout : NSObject
 
 @end
 
+#endif
+
 /*
  Important:
- You will most likely have to add the "-lc++" linker flag in the loader bundle to have it compile.
+ You will most likely have to add the "-lc++" linker flag in the loader bundle to have it compile with the CPP-solver enabled.
  Further more on iOS you will have to add the "-ObjC" linker flag in the loader bundle for categories to load properly.
-// Static libraries require  for categories to load properly (on iOS at least)!
-
 */

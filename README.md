@@ -6,19 +6,13 @@ While Core Animation `CALayer`s on **OS X** support constraint-based layout hand
 
 **DLConstraintLayout** aims to **fill that gap** by providing **drop-in replacements** for the missing [`CAConstraint`](https://developer.apple.com/library/mac/#documentation/GraphicsImaging/Reference/CAConstraint_class/Introduction/Introduction.html)/[`CAConstraintLayoutManager`](https://developer.apple.com/library/mac/#documentation/GraphicsImaging/Reference/CAConstraintLayoutManager_class/Introduction/Introduction.html) classes for iOS.
 
-## Differences to [DLConstraintLayout++](https://github.com/regexident/DLConstraintLayoutPlusPlus) project
-
-While **DLConstraintLayout++** provides the very same public API as [**DLConstraintLayout**](https://github.com/regexident/DLConstraintLayout), its internal implementations differs in that it makes use of Objective-C++.
-
-Benchmarks showed **DLConstraintLayout++** being on average ~7x faster than **DLConstraintLayout**.
-
 ## How to use it
 
 Let's assume for a moment that you have a `CALayer` hierarchy that you want to layout using constraints.
 
 On **OS X** you'd [end up with layout code](https://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/CoreAnimation_guide/BuildingaLayerHierarchy/BuildingaLayerHierarchy.html#//apple_ref/doc/uid/TP40004514-CH6-SW2) akin to this:
 
-    CALayer *layer = ...;
+    CALayer *layer = ...;****
 
     layer.layoutManager = [CAConstraintLayoutManager layoutManager];
 
@@ -30,7 +24,9 @@ Alright, but how about **iOS**?
 
 Well, all you'd need to do is this:
 
-1. Link your project against **libDLConstraintLayout.a** (while keeping [this](http://developer.apple.com/library/mac/#qa/qa1490/_index.html) in mind) or use **CocoaPods**.
+1. Link your project against **libDLConstraintLayout.a** (while keeping [this](http://developer.apple.com/library/mac/#qa/qa1490/_index.html) in mind.).
+2. Add `-ObjC` linker flag to project.
+3. If `DLCL_USE_CPP_SOLVER` is defined (see *"ObjC vs. ObjC++"* discussion below), add `-lc++` linker flag to project. 
 2. Add `#import <DLConstraintLayout/DLConstraintLayout.h>` to your layout controller's `.m` file.
 3. **Copy & paste** your code that's using **OS X**'s `CAConstraint`s into your iOS project and:
 4. Either: **Replace all occurences** of the `CA` prefix with `DLCL…` (and `kCA…` with `kDLCL…` respectively). (Regex substitution: `s/(?<=\bk?)CA(?=Constraint)/DLCL/g`)
@@ -63,6 +59,12 @@ If there however exist native `CAConstraint(LayoutManager)` classes and their AP
 #### Scenario #3: Existing but API-incompatible native classes found at runtime
 
 Last but not least if there exist native `CAConstraint(LayoutManager)` classes and their APIs happen to mismatch (as one cannot foresee if Apple will design constrained `CALayer` layout on iOS the same as on OS X, if ever at all.), then **DLConstraintLayout** will throw a `DLCLConstraintLayoutClassCollision` exception in `CALayer+DLConstraintLayout`'s `+(void)load;` method, terminating the app.
+
+## **Objective-C** vs. **Objective-C++**
+
+**DLConstraintLayout** implements both a **Objective-C**, as well as a **Objective-C++** flavoured layout solver. While both share the very same API and behaviour, benchmarks showed the **Objective-C++** based solver to be (in some cases up to **an order of magnitude**) **faster than** the **Objective-C** one.
+
+To enable the **Objective-C++** implementation simply define `DLCL_USE_CPP_SOLVER` in the build settings of **libDLConstraintLayout.a** and add the `-lc++` linker flag to the linking project.****
 
 ## Demos
 

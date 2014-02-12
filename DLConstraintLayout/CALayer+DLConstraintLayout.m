@@ -76,7 +76,13 @@ void swizzleOrAddInstanceMethod_dlcl(Class class, SEL selectorA, SEL selectorB) 
 	
 	// Swizzle custom layout method:
 	swizzleOrAddInstanceMethod_dlcl(layerClass, @selector(layoutSublayers), @selector(layoutSublayers_dlcl));
-		
+    
+#if defined(DLCL_USE_CPP_SOLVER) && defined(DEBUG)
+    NSLog(@"Objective-C++ constraint layout solver enabled.");
+#elif defined(DEBUG)
+    NSLog(@"Objective-C constraint layout solver enabled.");
+#endif
+    
 	return YES;
 }
 

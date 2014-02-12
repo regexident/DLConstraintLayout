@@ -8,10 +8,15 @@
 
 #import "DLCLViewController.h"
 
-#import "DLConstraintLayout.h"
+#if TARGET_OS_IPHONE
 
-#if !TARGET_OS_IPHONE
+#import <DLConstraintLayout/DLConstraintLayout.h>
+
+#else
+
+#import "DLConstraintLayout.h"
 #import <QuartzCore/QuartzCore.h>
+
 #endif
 
 NSString * const kSuperName = @"superlayer";
