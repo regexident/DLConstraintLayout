@@ -62,7 +62,7 @@ void DLCLConstrainLayer(CALayer *layer, CAConstraintAttribute attr, NSString *so
 + (NSDictionary *)layersByName {
 	static NSDictionary *layers = nil;
 	layers = @{
-		kCenterName		 : [[self class] layerWithName:kCenterName hue:0.0 saturation:0.0 brightness:1.0],
+		kCenterName		 : [[self class] layerWithName:kCenterName hue:0.0 saturation:0.0 brightness:0.5],
 		kTopLeftName	 : [[self class] layerWithName:kTopLeftName hue:0.888 saturation:0.885 brightness:0.988],
 		kTopName		 : [[self class] layerWithName:kTopName hue:0.990 saturation:0.948 brightness:0.988],
 		kTopRightName	 : [[self class] layerWithName:kTopRightName hue:0.082 saturation:0.854 brightness:0.992],
@@ -85,8 +85,6 @@ void DLCLConstrainLayer(CALayer *layer, CAConstraintAttribute attr, NSString *so
 	layer.endPoint = CGPointMake(0.5, 1.0);
 	layer.backgroundColor = [UIColor colorWithHue:hue saturation:saturation brightness:brightness alpha:1.0].CGColor;
 	layer.borderColor = [UIColor colorWithHue:hue saturation:saturation brightness:brightness * 0.75 alpha:1.0].CGColor;
-	layer.shadowColor = [UIColor blackColor].CGColor;
-	layer.shadowOffset = CGSizeMake(0.0, 1.5);
 #else
 	NSColor *whiteColor = [NSColor colorWithCalibratedWhite:1.0 alpha:1.0];
 	NSColor *blackColor = [NSColor colorWithCalibratedWhite:0.0 alpha:1.0];
@@ -94,13 +92,9 @@ void DLCLConstrainLayer(CALayer *layer, CAConstraintAttribute attr, NSString *so
 	layer.endPoint = CGPointMake(0.5, 0.0);
 	layer.backgroundColor = [NSColor colorWithCalibratedHue:hue saturation:saturation brightness:brightness alpha:1.0].CGColor;
 	layer.borderColor = [NSColor colorWithCalibratedHue:hue saturation:saturation brightness:brightness * 0.75 alpha:1.0].CGColor;
-	layer.shadowColor = [NSColor blackColor].CGColor;
-	layer.shadowOffset = CGSizeMake(0.0, -1.5);
 #endif
 	layer.borderWidth = 1.0;
 	layer.cornerRadius = 5.0;
-	layer.shadowOpacity = 0.5;
-	layer.shadowRadius = 2.5;
 	layer.colors = @[
 	  (id)[whiteColor colorWithAlphaComponent:0.5].CGColor,
 	  (id)[whiteColor colorWithAlphaComponent:0.1].CGColor,
@@ -170,6 +164,12 @@ void DLCLConstrainLayer(CALayer *layer, CAConstraintAttribute attr, NSString *so
 	
 	NSDictionary *layersByName = self.layersByName;
 	
+#if TARGET_OS_IPHONE
+	CGFloat topOffset = 10.0;
+#else
+	CGFloat topOffset = 0.0;
+#endif
+    
 	CALayer *center = layersByName[kCenterName];
 	[center addConstraint:[CAConstraint constraintWithAttribute:kCAConstraintMidY relativeTo:kSuperName attribute:kCAConstraintMidY]];
 	[center addConstraint:[CAConstraint constraintWithAttribute:kCAConstraintMidX relativeTo:kSuperName attribute:kCAConstraintMidX]];
@@ -179,21 +179,21 @@ void DLCLConstrainLayer(CALayer *layer, CAConstraintAttribute attr, NSString *so
 	[topLeft addConstraint:[CAConstraint constraintWithAttribute:kCAConstraintWidth relativeTo:kLeftName attribute:kCAConstraintWidth]];
 	[topLeft addConstraint:[CAConstraint constraintWithAttribute:kCAConstraintMidX  relativeTo:kLeftName attribute:kCAConstraintMidX]];
 	[topLeft addConstraint:[CAConstraint constraintWithAttribute:kCAConstraintMaxY  relativeTo:kLeftName attribute:kCAConstraintMinY offset:-10]];
-	[topLeft addConstraint:[CAConstraint constraintWithAttribute:kCAConstraintMinY relativeTo:kSuperName attribute:kCAConstraintMinY offset:10]];
+	[topLeft addConstraint:[CAConstraint constraintWithAttribute:kCAConstraintMinY relativeTo:kSuperName attribute:kCAConstraintMinY offset:10 + topOffset]];
 	[superlayer addSublayer:topLeft];
 	
 	CALayer *top = layersByName[kTopName];
 	[top addConstraint:[CAConstraint constraintWithAttribute:kCAConstraintWidth relativeTo:kCenterName attribute:kCAConstraintWidth]];
 	[top addConstraint:[CAConstraint constraintWithAttribute:kCAConstraintMidX  relativeTo:kCenterName attribute:kCAConstraintMidX]];
 	[top addConstraint:[CAConstraint constraintWithAttribute:kCAConstraintMaxY  relativeTo:kCenterName attribute:kCAConstraintMinY offset:-10.0]];
-	[top addConstraint:[CAConstraint constraintWithAttribute:kCAConstraintMinY  relativeTo:kSuperName  attribute:kCAConstraintMinY offset:10.0]];
+	[top addConstraint:[CAConstraint constraintWithAttribute:kCAConstraintMinY  relativeTo:kSuperName  attribute:kCAConstraintMinY offset:10.0 + topOffset]];
 	[superlayer addSublayer:top];
 	
 	CALayer *topRight = layersByName[kTopRightName];
 	[topRight addConstraint:[CAConstraint constraintWithAttribute:kCAConstraintWidth relativeTo:kRightName attribute:kCAConstraintWidth]];
 	[topRight addConstraint:[CAConstraint constraintWithAttribute:kCAConstraintMidX  relativeTo:kRightName attribute:kCAConstraintMidX]];
 	[topRight addConstraint:[CAConstraint constraintWithAttribute:kCAConstraintMaxY  relativeTo:kRightName attribute:kCAConstraintMinY offset:-10]];
-	[topRight addConstraint:[CAConstraint constraintWithAttribute:kCAConstraintMinY  relativeTo:kSuperName attribute:kCAConstraintMinY offset:10]];
+	[topRight addConstraint:[CAConstraint constraintWithAttribute:kCAConstraintMinY  relativeTo:kSuperName attribute:kCAConstraintMinY offset:10 + topOffset]];
 	[superlayer addSublayer:topRight];
 
 	CALayer *right = layersByName[kRightName];
