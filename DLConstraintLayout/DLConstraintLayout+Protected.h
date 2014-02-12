@@ -14,14 +14,6 @@
 extern NSString * const kDLCAConstraintClassName;
 extern NSString * const kDLCAConstraintLayoutManagerClassName;
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-	
 BOOL DLCLClassImplementsProtocol(Class aClass, Protocol *aProtocol);
-
-#ifdef __cplusplus
-}
-#endif
 
 #endif
