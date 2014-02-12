@@ -127,30 +127,6 @@ NSString *DLCLConstraintAttributeMaskDescription(int attributeMask) {
 	return [self isEqualToConstraint:(DLCLConstraint *)object];
 }
 
-- (BOOL)getAxis:(DLCLConstraintAxis *)axis axisAttribute:(DLCLConstraintAxisAttribute *)axisAttribute {
-	DLCLConstraintAttribute attribute = self.attribute;
-	DLCLConstraintAxis attributeAxis = DLCLConstraintAttributeGetAxis(attribute);
-	if (axis) {
-		*axis = attributeAxis;
-	}
-	if (axisAttribute) {
-		*axisAttribute = DLCLConstraintAttributeGetAxisAttribute(attribute);
-	}
-	return YES;
-}
-
-- (BOOL)getSourceAxis:(DLCLConstraintAxis *)axis axisAttribute:(DLCLConstraintAxisAttribute *)axisAttribute {
-	DLCLConstraintAttribute attribute = self.sourceAttribute;
-	DLCLConstraintAxis attributeAxis = DLCLConstraintAttributeGetAxis(attribute);
-	if (axis) {
-		*axis = attributeAxis;
-	}
-	if (axisAttribute) {
-		*axisAttribute = DLCLConstraintAttributeGetAxisAttribute(attribute);
-	}
-	return YES;
-}
-
 - (CALayer *)sourceLayer {
 	return self.constraintStruct.source_layer;
 }
