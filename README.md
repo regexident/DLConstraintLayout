@@ -38,9 +38,9 @@ Well, all you'd need to do is this:
 
 The code **stays the same**!
 
-For more info see the included iOS/OSX demos.
-
 **That's it.**
+
+(For more info see the included iOS/OSX demos.)
 
 ## How it works
 
@@ -70,7 +70,7 @@ Last but not least if there exist native `CAConstraint(LayoutManager)` classes a
 
 ## ARC
 
-**DLConstraintLayout** works with **manual** as well as **automatic reference counting (ARC)**.
+**DLConstraintLayout** uses **automatic reference counting (ARC)**.
 
 ## Dependencies
 
