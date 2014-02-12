@@ -8,10 +8,9 @@
 
 #import "DLCLViewController.h"
 
-#if TARGET_OS_IPHONE
-#import <DLConstraintLayout/DLConstraintLayout.h>
-#else
 #import "DLConstraintLayout.h"
+
+#if !TARGET_OS_IPHONE
 #import <QuartzCore/QuartzCore.h>
 #endif
 
@@ -79,9 +78,6 @@ void DLCLConstrainLayer(CALayer *layer, CAConstraintAttribute attr, NSString *so
 + (CALayer *)layerWithName:(NSString *)name hue:(CGFloat)hue saturation:(CGFloat)saturation brightness:(CGFloat)brightness {
 	CAGradientLayer *layer = [CAGradientLayer layer];
 
-	// Disable implicit animations for auto-layout:
-//	layer.actions = @{@"bounds" : [NSNull null], @"position" : [NSNull null]};
-	
 #if TARGET_OS_IPHONE
 	UIColor *whiteColor = [UIColor colorWithWhite:1.0 alpha:1.0];
 	UIColor *blackColor = [UIColor colorWithWhite:0.0 alpha:1.0];
