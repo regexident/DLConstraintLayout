@@ -57,15 +57,6 @@
 	return self;
 }
 
-#if !__has_feature(objc_arc)
-
-- (void)dealloc {
-	self.solversByLayer = nil;
-	[super dealloc];
-}
-
-#endif
-
 - (void)invalidateLayoutOfLayer:(CALayer *)layer {
 	NSAssert(layer, @"Method argument 'layer' must not be nil.");
 	[self updateSolverForLayer:layer];

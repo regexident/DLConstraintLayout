@@ -11,20 +11,6 @@
 #ifndef DLConstraintLayout_DLConstraintLayout_Protected_h
 #define DLConstraintLayout_DLConstraintLayout_Protected_h
 
-#if __has_feature(objc_arc)
-
-#define DLCL_RETAIN(_o) (_o)
-#define DLCL_RELEASE(_o)
-#define DLCL_AUTORELEASE(_o) (_o)
-
-#else
-
-#define DLCL_RETAIN(_o) [(_o) retain]
-#define DLCL_RELEASE(_o) [(_o) release]
-#define DLCL_AUTORELEASE(_o) [(_o) autorelease]
-
-#endif
-
 extern NSString * const kDLCAConstraintClassName;
 extern NSString * const kDLCAConstraintLayoutManagerClassName;
 

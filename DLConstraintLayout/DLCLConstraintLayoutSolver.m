@@ -39,7 +39,7 @@
 }
 
 + (instancetype)solverWithLayer:(CALayer *)layer {
-	return DLCL_AUTORELEASE([[self alloc] initWithLayer:layer]);
+	return [[self alloc] initWithLayer:layer];
 }
 
 - (void)solveLayout {

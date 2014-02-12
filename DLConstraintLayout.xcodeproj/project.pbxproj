@@ -434,7 +434,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = DL;
-				LastUpgradeCheck = 0460;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = Regexident;
 			};
 			buildConfigurationList = C2BF8A9816F0E366005F4627 /* Build configuration list for PBXProject "DLConstraintLayout" */;
@@ -624,7 +624,6 @@
 		C25F4FDC16F8900E00A8671C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -647,7 +646,6 @@
 		C25F4FDD16F8900E00A8671C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -693,7 +691,6 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = "-DDLCL_USE_NATIVE_CA_NAMESPACE";
 				SDKROOT = iphoneos;
@@ -719,7 +716,6 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_CFLAGS = (
 					"-DDLCL_USE_NATIVE_CA_NAMESPACE",
 					"-DNS_BLOCK_ASSERTIONS=1",
@@ -791,7 +787,7 @@
 		C2BF8AEC16F0E404005F4627 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				DSTROOT = /tmp/DLConstraintLayout.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DLConstraintLayout/DLConstraintLayout-Prefix.pch";
@@ -804,7 +800,7 @@
 		C2BF8AED16F0E404005F4627 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				DSTROOT = /tmp/DLConstraintLayout.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DLConstraintLayout/DLConstraintLayout-Prefix.pch";

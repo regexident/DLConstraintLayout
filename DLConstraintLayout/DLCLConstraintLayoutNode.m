@@ -35,7 +35,7 @@
 }
 
 + (id)nodeWithAxis:(DLCLConstraintAxis)axis forLayer:(CALayer *)layer {
-	return DLCL_AUTORELEASE([[self alloc] initWithAxis:axis forLayer:layer]);
+	return [[self alloc] initWithAxis:axis forLayer:layer];
 }
 
 - (NSSet *)constraints {

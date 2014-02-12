@@ -37,27 +37,27 @@ NSString *DLCLConstraintAttributeMaskDescription(int attributeMask) {
 @implementation DLCLConstraint
 
 + (instancetype)constraintWithAttribute:(DLCLConstraintAttribute)attribute relativeTo:(NSString *)sourceLayer attribute:(DLCLConstraintAttribute)sourceAttribute scale:(CGFloat)scale offset:(CGFloat)offset {
-	return DLCL_AUTORELEASE([(DLCLConstraint *)[self alloc] initWithAttribute:attribute
-																   relativeTo:sourceLayer
-																	attribute:sourceAttribute
-																		scale:scale
-																	   offset:offset]);
+	return [(DLCLConstraint *)[self alloc] initWithAttribute:attribute
+                                                  relativeTo:sourceLayer
+                                                   attribute:sourceAttribute
+                                                       scale:scale
+                                                      offset:offset];
 }
 
 + (instancetype)constraintWithAttribute:(DLCLConstraintAttribute)attribute relativeTo:(NSString *)sourceLayer attribute:(DLCLConstraintAttribute)sourceAttribute offset:(CGFloat)offset {
-	return DLCL_AUTORELEASE([(DLCLConstraint *)[self alloc] initWithAttribute:attribute
-																   relativeTo:sourceLayer
-																	attribute:sourceAttribute
-																		scale:1.0
-																	   offset:offset]);
+	return [(DLCLConstraint *)[self alloc] initWithAttribute:attribute
+                                                  relativeTo:sourceLayer
+                                                   attribute:sourceAttribute
+                                                       scale:1.0
+                                                      offset:offset];
 }
 
 + (instancetype)constraintWithAttribute:(DLCLConstraintAttribute)attribute relativeTo:(NSString *)sourceLayer attribute:(DLCLConstraintAttribute)sourceAttribute {
-	return DLCL_AUTORELEASE([(DLCLConstraint *)[self alloc] initWithAttribute:attribute
-																   relativeTo:sourceLayer
-																	attribute:sourceAttribute
-																		scale:1.0
-																	   offset:0.0]);
+	return [(DLCLConstraint *)[self alloc] initWithAttribute:attribute
+                                                  relativeTo:sourceLayer
+                                                   attribute:sourceAttribute
+                                                       scale:1.0
+                                                      offset:0.0];
 }
 
 + (id)alloc {
@@ -85,15 +85,6 @@ NSString *DLCLConstraintAttributeMaskDescription(int attributeMask) {
 	}
 	return self;
 }
-
-#if !__has_feature(objc_arc)
-
-- (void)dealloc {
-	self.sourceName = nil;
-	[super dealloc];
-}
-
-#endif
 
 - (BOOL)isEqualToConstraint:(DLCLConstraint *)constraint {
 	return (self.attribute == constraint.attribute &&
