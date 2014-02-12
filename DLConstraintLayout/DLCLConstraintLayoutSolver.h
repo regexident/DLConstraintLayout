@@ -12,7 +12,7 @@
 
 @interface DLCLConstraintLayoutSolver : NSObject
 
-@property (readonly, unsafe_unretained, nonatomic) CALayer *layer;
+@property (readonly, weak, nonatomic) CALayer *layer;
 
 - (id)initWithLayer:(CALayer *)layer;
 + (instancetype)solverWithLayer:(CALayer *)layer;

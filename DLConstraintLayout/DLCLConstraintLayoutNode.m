@@ -12,7 +12,7 @@
 
 @interface DLCLConstraintLayoutNode ()
 
-@property (readwrite, unsafe_unretained, nonatomic) CALayer *layer;
+@property (readwrite, weak, nonatomic) CALayer *layer;
 @property (readwrite, assign, nonatomic) DLCLConstraintAxis axis;
 @property (readwrite, strong, nonatomic) NSMutableSet *mutableConstraints;
 @property (readwrite, strong, nonatomic) NSMutableSet *mutableIncoming;

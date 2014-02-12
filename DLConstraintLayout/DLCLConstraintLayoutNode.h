@@ -12,7 +12,7 @@
 
 @interface DLCLConstraintLayoutNode : NSObject
 
-@property (readonly, unsafe_unretained, nonatomic) CALayer *layer;
+@property (readonly, weak, nonatomic) CALayer *layer;
 @property (readonly, assign, nonatomic) DLCLConstraintAxis axis;
 @property (readonly, strong, nonatomic) NSSet *constraints;
 @property (readonly, strong, nonatomic) NSSet *incoming;

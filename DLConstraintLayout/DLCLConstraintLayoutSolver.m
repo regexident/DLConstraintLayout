@@ -16,7 +16,7 @@
 
 @interface DLCLConstraintLayoutSolver ()
 
-@property (readwrite, unsafe_unretained, nonatomic) CALayer *layer;
+@property (readwrite, weak, nonatomic) CALayer *layer;
 @property (readwrite, strong, nonatomic) NSMutableArray *nodes;
 
 @end

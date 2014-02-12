@@ -30,7 +30,7 @@ NSString *DLCLConstraintAttributeMaskDescription(int attributeMask) {
 @property (readwrite, assign, nonatomic) CGFloat offset;
 @property (readwrite, assign, nonatomic) CGFloat scale;
 @property (readwrite, assign, nonatomic) DLCLConstraintAttribute sourceAttribute;
-@property (readwrite, strong, nonatomic) NSString *sourceName;
+@property (readwrite, copy, nonatomic) NSString *sourceName;
 
 @end
 
