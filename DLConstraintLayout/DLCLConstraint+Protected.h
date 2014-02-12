@@ -11,17 +11,17 @@
 #ifndef DLConstraintLayout_DLCLConstraint_Protected_h
 #define DLConstraintLayout_DLCLConstraint_Protected_h
 
-typedef enum : BOOL {
+typedef NS_ENUM(BOOL, DLCLConstraintAxis) {
 	DLCLConstraintAxisX = 0,
 	DLCLConstraintAxisY = 1
-} DLCLConstraintAxis;
+};
 
-typedef enum : BOOL {
-	DLCLConstraintAxisAttributeMin = 0,
-	DLCLConstraintAxisAttributeMid = 1,
-	DLCLConstraintAxisAttributeMax = 2,
+typedef NS_ENUM(NSUInteger, DLCLConstraintAxisAttribute) {
+	DLCLConstraintAxisAttributeMin  = 0,
+	DLCLConstraintAxisAttributeMid  = 1,
+	DLCLConstraintAxisAttributeMax  = 2,
 	DLCLConstraintAxisAttributeSize = 3
-} DLCLConstraintAxisAttribute;
+};
 
 @interface DLCLConstraint ()
 
