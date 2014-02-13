@@ -30,12 +30,6 @@ NSString * const kTopRightName = @"topRight";
 NSString * const kBottomLeftName = @"bottomLeft";
 NSString * const kBottomRightName = @"bottomRight";
 
-#define DLCL_USE_NATIVE_CA_NAMESPACE 1
-// Setting the "DLCL_USE_NATIVE_CA_NAMESPACE" compiler flag to "1"
-// allows you to use "CAConstraint..." instead of "DLCLConstraint..."
-// (which it then gets mapped to by the compiler via @compatibility_alias/typedef/#define respectively)
-// See "DLConstraintLayout.h" for how this works.
-
 void DLCLConstrainLayer(CALayer *layer, CAConstraintAttribute attr, NSString *source, CAConstraintAttribute sourceAttr) {
 	[layer addConstraint:[CAConstraint constraintWithAttribute:attr relativeTo:source attribute:sourceAttr]];
 }
