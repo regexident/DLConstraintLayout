@@ -84,4 +84,4 @@ Vincent Esche ([@regexident](http://twitter.com/regexident))
 
 ## License
 
-**DLConstraintLayout** is available under a **modified BSD-3 clause license** with the **additional requirement of attribution**. See the `LICENSE.txt` file for more info.
+**DLConstraintLayout** is available under a **modified BSD-3 clause license** with the **additional requirement of attribution**. See the `LICENSE` file for more info.
